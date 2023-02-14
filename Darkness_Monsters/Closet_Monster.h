@@ -39,7 +39,7 @@ public:
      * Effects: if the door is closed, return "*Knocks on door*"
      *          if the door is open, set the door to be closed and return "*Slams door*"
      */
-    // TODO: Implement this method in Closet_Monster.cpp
+    // Implement this method in Closet_Monster.cpp
     std::string scare() override;
 
 private:

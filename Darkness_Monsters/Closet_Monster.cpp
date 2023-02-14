@@ -19,7 +19,13 @@ bool Closet_Monster::is_open() const {
     return door_is_open;
 }
 
-// TODO: Implement the scare method here
+// Implement the scare method here
 string Closet_Monster::scare() {
-    return "";
+    if (door_is_open) {
+        door_is_open = false;
+        return "*Slams door*";
+    }
+    else {
+        return "*Knocks on door*";
+    }
 }
