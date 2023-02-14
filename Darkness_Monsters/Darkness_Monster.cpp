@@ -20,7 +20,16 @@ void Darkness_Monster::set_number_of_eyes(int noe) {
     number_of_eyes = noe;
 }
 
-// TODO: Implement poke_eye method here
+// Implement poke_eye method here
 bool Darkness_Monster::poke_eye() {
-    return false;
+    if (number_of_eyes >= 1) {
+        --number_of_eyes;
+        return true;
+    }
+    else {
+        int min = 5;
+        int range = (MAX_NUMBER_EYES - min) + 1;
+        number_of_eyes = (rand() % range) + min;
+        return false;
+    }
 }
