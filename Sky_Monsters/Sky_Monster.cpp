@@ -5,7 +5,10 @@
 #include "Sky_Monster.h"
 
 Sky_Monster::Sky_Monster() {
-    number_of_wings = rand() % (MAX_NUMBER_WINGS - 1) + 2;
+    for (int i = 0; i < 1000; i++) {
+        number_of_wings = rand() % ((MAX_NUMBER_WINGS / 2)) + 1;
+        number_of_wings *= 2;
+    }
 }
 
 Sky_Monster::Sky_Monster(int now) {

@@ -12,7 +12,7 @@ public:
     /**
      * Requires: nothing
      * Modifies: number_of_wings
-     * Effects: sets number_of_wings to random int in range 2-100
+     * Effects: sets number_of_wings to random even int in range 2-100
      */
     // TODO: Is the darkness_monster implementation of this actually right?
     Sky_Monster();

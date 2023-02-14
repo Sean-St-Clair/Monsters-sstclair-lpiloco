@@ -7,6 +7,8 @@ Cloud_Monster::Cloud_Monster() : Sky_Monster(), raining(true) {
 Cloud_Monster::Cloud_Monster(int now) : Sky_Monster(now), raining(true) {
 }
 
+// TODO: look at the weird constructor stuff
+
 bool Cloud_Monster::stop_the_rain() {
     if (!raining) {
         return false;
