@@ -51,9 +51,21 @@ bool test_Darkness_Monster() {
         passed = false;
         cout << "FAILED negative test case" << endl;
     }
-    // TODO: Test poke_eye method
-    cout << "FAILED: Did not add Darkness Monster test cases" << endl;
-    passed = false;
+    // Test poke_eye method
+    Closet_Monster cm3(2);
+    cm3.poke_eye();
+    cm3.poke_eye();
+    cm3.poke_eye();
+    if (cm3.get_number_of_eyes() < 5 || cm3.get_number_of_eyes() > Darkness_Monster::MAX_NUMBER_EYES){
+        cout << "FAILED 0 eye poke test case" << endl;
+        passed = false;
+    }
+    Closet_Monster cm4(5);
+    cm4.poke_eye();
+    if (cm4.get_number_of_eyes() != 4){
+        cout << "FAILED 5 eye poke test case" << endl;
+        passed = false;
+    }
     return passed;
 }
 

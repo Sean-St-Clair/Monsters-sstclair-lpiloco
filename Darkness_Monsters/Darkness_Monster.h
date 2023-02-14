@@ -47,7 +47,7 @@ public:
      * Effects: if number_of_eyes is at least 1, decrements number_of_eyes by one and returns true.
      *          otherwise sets number_of_eyes to a random number between 5 and MAX_NUMBER_EYES and returns false.
      */
-    // TODO: Implement this method in Darkness_Monster.cpp
+    // Implement this method in Darkness_Monster.cpp
     virtual bool poke_eye();
 
     // pure virtual method to return a scary string
