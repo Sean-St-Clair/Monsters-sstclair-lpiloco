@@ -112,11 +112,14 @@ bool test_Under_Bed_Monster() {
         passed = false;
         cout << "FAILED default constructor test case" << endl;
     }
-    // TODO: test scare method
+    //  test scare method
     Under_Bed_Monster ubm3;
-    string message = ubm3.scare();
-    if (message != "*Grabs you*" && message != "*" + to_string(ubm3.get_number_of_eyes()) + " eyes watching you*") {
-        cout << "FAILED scare test case" << endl;
+    for (int i = 0; i <= ubm3.MAX_NUMBER_EYES; ++i) {
+        string message = ubm3.scare();
+        if (message != "*Grabs you*" && message != "*" + to_string(ubm3.get_number_of_eyes()) + " eyes watching you*") {
+            cout << "FAILED scare test case" << endl;
+            passed = false;
+        }
     }
 
     return passed;
