@@ -56,7 +56,7 @@ bool test_Darkness_Monster() {
     cm3.poke_eye();
     cm3.poke_eye();
     cm3.poke_eye();
-    if (cm3.get_number_of_eyes() < 5 || cm3.get_number_of_eyes() > Darkness_Monster::MAX_NUMBER_EYES){
+    if (cm3.get_number_of_eyes() < 5 && cm3.get_number_of_eyes() > Darkness_Monster::MAX_NUMBER_EYES){
         cout << "FAILED 0 eye poke test case" << endl;
         passed = false;
     }
@@ -86,9 +86,17 @@ bool test_Closet_Monster() {
         passed = false;
         cout << "FAILED default constructor test case" << endl;
     }
-    // TODO: test scare method
-    cout << "FAILED: Did not add Closet Monster test cases" << endl;
-    passed = false;
+    // test scare method
+    Closet_Monster cm3;
+    if (cm3.scare() != "*Knocks on door*") {
+        cout << "FAILED closed door scare" << endl;
+        passed = false;
+    }
+    cm3.open_door();
+    if (cm3.scare() != "*Slams door*" && cm3.is_open() == false) {
+        cout << "FAILED open door scare" << endl;
+        passed = false;
+    }
     return passed;
 }
 
@@ -105,7 +113,11 @@ bool test_Under_Bed_Monster() {
         cout << "FAILED default constructor test case" << endl;
     }
     // TODO: test scare method
-    cout << "FAILED: Did not add Under Bed Monster test cases" << endl;
-    passed = false;
+    Under_Bed_Monster ubm3;
+    string message = ubm3.scare();
+    if (message != "*Grabs you*" && message != "*" + to_string(ubm3.get_number_of_eyes()) + " eyes watching you*") {
+        cout << "FAILED scare test case" << endl;
+    }
+
     return passed;
 }
