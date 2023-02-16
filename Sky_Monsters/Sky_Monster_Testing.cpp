@@ -9,14 +9,6 @@ bool test_Cloud_Monster();
 bool test_Comet_Monster();
 
 int main() {
-    // TODO: REMOVE THIS
-    int num;
-    for (int i = 0; i < 1000; i++) {
-        num = rand() % ((100 / 2)) + 1;
-        num *= 2;
-        cout << num << endl;
-    }
-
     srand(time(NULL));
     if (test_Sky_Monster()) {
         cout << "Passed all Sky Monster test cases" << endl;
