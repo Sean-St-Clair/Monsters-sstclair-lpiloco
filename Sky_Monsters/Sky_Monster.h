@@ -38,7 +38,7 @@ public:
     virtual int get_number_of_wings() const;
 
     /**
-     * Requires: nothing
+     * Requires: new number of wings
      * Modifies: number_of_wings
      * Effects: sets number_of_wings to now if now is an even number in range 2-100.
      *          Otherwise sets number_of_wings to 100.
