@@ -27,6 +27,6 @@ void Sky_Monster::set_number_of_wings(int now) {
 }
 
 bool Sky_Monster::growth_spurt() {
-
+    set_number_of_wings(number_of_wings + 2);
     return false;
 }
